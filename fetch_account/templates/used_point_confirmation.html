@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class='container'>
+    <div class='jumbotron'>
+        {% if redemed_points %}
+        <h1>Points are subtracted from the following payer</h1>
+        {% for redemed_point in redemed_points %}
+            <h2>{{redemed_point.payerName}}-{{redemed_point.availablePoints}}</h2>
+        {% endfor %}
+        {% else %}
+        <h1>You do not have enough points to redeem!</h1>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

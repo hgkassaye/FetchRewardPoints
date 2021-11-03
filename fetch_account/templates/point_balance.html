@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block body%}
+<div class='container'>
+    <div class='jumbotron'>
+        {% if total_balance %}
+            <h1>Total points availabel to spend</h1>
+            <h1>{{ total_balance }}</h1>
+        {% else %}
+            <h1>You have no points currently!</h1>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

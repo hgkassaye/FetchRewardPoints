@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block body%}
+<div class='container'>
+    <!-- check to make sure we have aggregated point summary available to display -->
+    {% if point_lists %}
+    <h1>Points Summary</h1>
+    <table class='table'>
+        <thead class='thead-dark'> 
+            <th scope='col'>Payee</th>
+            <th scope='col'>Points</th>
+            <th scope='col'>Transaction Date</th>
+        </thead>
+        <!-- loop throug each available point in the database to display -->
+        {% for point in point_lists %}
+        <tr>
+            <td>{{ point.payerName }}</td>
+            <td>{{ point.availablePoints }}</td>
+            <td>{{ point.transactionDate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <div class='jumbotron'>
+        <h2>No points available to display</h2>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block body%}
+<div class='container'>
+    <div class='jumbotron'>
+        <h1>Spend your points</h1>
+        <h3>How many points do you want to spend?</h3>
+        <form action="{% url 'spend_points'%}" method = 'POST'>
+            {% csrf_token %}
+            <input type="text" name='pointsToUse'>
+            <button class='btn btn-primary' type="submit">Redeem</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
