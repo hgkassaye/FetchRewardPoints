@@ -28,7 +28,3 @@ Run the followings commands to start a development server:
 At this point the development server is started. Copy the link provided into your browser (use Google Chrome). Use the navigation menu to add transactions, redeem points and
 get points summary
 
-![test](/Users/hiwotkassaye/desktop/imageone.jpeg)
-
-## Django Overview
-
